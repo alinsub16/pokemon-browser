@@ -1,6 +1,6 @@
 # 🐾 Pokémon React App
 
-A simple **React web app** to browse and view Pokémon, built with **React, Tailwind CSS, React Router, and Axios**. Users can view a paginated list of Pokémon, click to see details, and search by name.
+A simple **React web app** to browse and view Pokémon, built with **React, Tailwind CSS, React Router, and Axios**. Users can view a paginated list of Pokémon, click to see details.
 
 ---
 
@@ -29,7 +29,7 @@ A simple **React web app** to browse and view Pokémon, built with **React, Tail
 ### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pokeapp.git
+git clone https://github.com/alinsub16/pokemon-browser.git
 cd pokeapp
 ```
 

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import PokemonPage from "./pages/PokemonPage";
 
@@ -6,12 +6,12 @@ function App() {
 
   return (
     <>
-      <Router>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pokemon/:name" element={<PokemonPage />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </>
   )
 }
