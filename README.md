@@ -1,4 +1,4 @@
-# 🐾 Pokémon React App
+# 🐾 Pokémon Browser
 
 A simple **React web app** to browse and view Pokémon, built with **React, Tailwind CSS, React Router, and Axios**. Users can view a paginated list of Pokémon, click to see details.
 
