@@ -39,13 +39,7 @@ cd pokeapp
 npm install
 ```
 
-### 3️⃣ Create `.env` file
-
-```bash
-VITE_POKE_API_URL=https://pokeapi.co/api/v2/pokemon
-```
-
-### 4️⃣ Run locally
+### 3️⃣ Run locally
 
 ```bash
 npm run dev
