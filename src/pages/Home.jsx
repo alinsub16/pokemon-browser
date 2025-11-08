@@ -1,9 +1,25 @@
 import React from "react";
+import { useEffect } from "react";
 import usePokemonList from "../hooks/usePokemonList";
+import { useSearchParams } from "react-router-dom";
 import PokemonCard from "../components/PokemonCard";
 
 export default function Home() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = parseInt(searchParams.get("page")) || 1;
+  const limit = 20;
+
   const { pokemons, offset, setOffset, loading, error } = usePokemonList();
+
+// Sync offset with URL page
+  useEffect(() => {
+    setOffset((page - 1) * limit);
+  }, [page, limit, setOffset]);
+
+  
+  const goToPage = (newPage) => {
+    setSearchParams({ page: newPage });
+  };
 
   return (
     <div className="min-h-screen p-8 ">
@@ -20,14 +36,14 @@ export default function Home() {
 
       <div className="flex justify-center gap-4 mt-8">
         <button
-          onClick={() => offset >= 20 && setOffset(offset - 20)}
-          disabled={offset === 0}
+          onClick={() => goToPage(page - 1)}
+          disabled={page <= 1}
           className="bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded disabled:opacity-50"
         >
           Previous
         </button>
         <button
-          onClick={() => setOffset(offset + 20)}
+          onClick={() => goToPage(page + 1)}
           className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded"
         >
           Next

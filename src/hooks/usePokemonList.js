@@ -7,6 +7,7 @@ export default function usePokemonList(limit = 20) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // load data
   useEffect(() => {
     const loadPokemons = async () => {
       try {
